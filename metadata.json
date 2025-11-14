@@ -1,0 +1,7 @@
+{
+  "name": "Function Foundry",
+  "description": "An AI-powered 'Executive Suite' of delightful, quirky characters who help transmute the chaos of daily life into a meaningful, creative, and joyful existence. It's a secretary, a mentor, a cheerleader, and a creative partner, all rolled into one.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
