@@ -219,6 +219,7 @@ export const GlobalVoiceControl = forwardRef<GlobalVoiceControlHandle, GlobalVoi
         console.log('Global voice session opened via proxy.');
         
         // 4. Send the *initial configuration* as the first message.
+        // This is where your "proper prompt and system instructions" go.
         const configMessage = {
           config: {
             responseModalities: [Modality.AUDIO],
@@ -310,11 +311,9 @@ export const GlobalVoiceControl = forwardRef<GlobalVoiceControlHandle, GlobalVoi
 
       ws.onclose = (e: CloseEvent) => {
         console.log('Global voice session WebSocket closed.');
-        // --- THIS IS THE NEW DEBUGGING CODE ---
         if (e.reason) {
           console.error(`WebSocket closed with reason: ${e.reason}`);
         }
-        // --- END NEW DEBUGGING CODE ---
         stopListening(); // Ensure full cleanup
       };
 
