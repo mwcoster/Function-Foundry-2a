@@ -362,8 +362,7 @@ const handleCloseDigest = () => {
           showButton={!isOnboarding}
         />
         
-        {/* THIS IS THE BROKEN COMPONENT. I HAVE COMMENTED IT OUT 
-        TO PREVENT THE APP FROM CRASHING.
+ {/* The GlobalVoiceControl component is now fixed and can be enabled. */}
         
         {!activeHub && <GlobalVoiceControl 
           ref={globalVoiceControlRef}
@@ -375,8 +374,6 @@ const handleCloseDigest = () => {
           onToggleSanctuaryMode={() => setSanctuaryMode(s => !s)}
           onStartHuddle={() => setIsTeamHuddleActive(true)}
         />}
-        
-        */}
 
         {praiseMessage && <PraiseToast message={praiseMessage} onClose={() => setPraiseMessage(null)} />}
         {bossBattleQuest && <BossBattle quest={bossBattleQuest} onClose={() => setBossBattleQuest(null)} onComplete={handleBossBattleComplete} />}
